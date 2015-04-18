@@ -21,7 +21,55 @@ public class quiz implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    
+    public String kerdes;
+    public String helyesValasz;
+    public String valasz_2;
+    public String valasz_3;
+    public String valasz_4;
 
+    public String getKerdes() {
+        return kerdes;
+    }
+
+    public void setKerdes(String kerdes) {
+        this.kerdes = kerdes;
+    }
+
+    public String getHelyesValasz() {
+        return helyesValasz;
+    }
+
+    public void setHelyesValasz(String helyesValasz) {
+        this.helyesValasz = helyesValasz;
+    }
+
+    public String getValasz_2() {
+        return valasz_2;
+    }
+
+    public void setValasz_2(String valasz_2) {
+        this.valasz_2 = valasz_2;
+    }
+
+    public String getValasz_3() {
+        return valasz_3;
+    }
+
+    public void setValasz_3(String valasz_3) {
+        this.valasz_3 = valasz_3;
+    }
+
+    public String getValasz_4() {
+        return valasz_4;
+    }
+
+    public void setValasz_4(String valasz_4) {
+        this.valasz_4 = valasz_4;
+    }
+    
+    
+    
     public Long getId() {
         return id;
     }
