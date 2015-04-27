@@ -100,7 +100,8 @@ public class quiz implements Serializable {
 
     @Override
     public String toString() {
-        return "entities.quiz[ id=" + id + " ]";
+        return "entities.quiz[ id=" + id + " ]: "+getKerdes()+": "+getHelyesValasz()+"/"+
+                getValasz_2()+"/"+getValasz_3()+"/"+getValasz_4();
     }
     
 }

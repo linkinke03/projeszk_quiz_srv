@@ -5,12 +5,18 @@
  */
 package main;
 
+import entities.quiz;
+import entities.quizJpaController;
+import java.util.Random;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 /**
  *
  * @author pafuaai
  */
 public class server {
     public static void main(String[] args){
-        System.out.println("teszt");
+        
     }
 }
