@@ -6,9 +6,13 @@ import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 import javax.persistence.Persistence;
 
 public class ClientConnection extends java.rmi.server.UnicastRemoteObject implements Serializable, QuestionInterface {
+    
+     
+    
     
     private quizJpaController quizController;
     private quiz q;
@@ -71,6 +75,11 @@ public class ClientConnection extends java.rmi.server.UnicastRemoteObject implem
     public QuizQuestion getNewQuestion() {
         q = quizController.getRandomQuiz();
         createQuizQuestion(q);
+       /* try {
+        TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException ex) {
+        
+        }*/
         return this.question;
     }
 
