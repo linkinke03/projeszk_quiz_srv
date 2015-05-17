@@ -140,6 +140,7 @@ public class quizJpaController implements Serializable {
         Random r = new Random();
         int rnd;
         rnd =r.nextInt(getquizCount())+1;
+
         long id = rnd;
         q = findquiz(id);
         return q;
