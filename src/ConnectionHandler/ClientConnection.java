@@ -44,6 +44,8 @@ public class ClientConnection extends Thread {
         while(!s.isConnected() || !action.equals("quit")) {
             switch (action) {
                 case "new":
+                    q = quizController.getRandomQuiz();
+                    //System.out.println("---------->"+q.kerdes);
                     createQuizQuestion(q);
                     action = sc.nextLine();
                     break;
@@ -88,7 +90,7 @@ public class ClientConnection extends Thread {
         String question = q.getKerdes();
         
         ArrayList<String> answers = new ArrayList();
-        Integer n = r.nextInt(3)+1;
+        Integer n = r.nextInt(4)+1;
         Boolean correctAdded = false;
         
         for(int i = 0; i<4; ++i){
