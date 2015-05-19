@@ -36,7 +36,10 @@ public class quiz implements Serializable {
     public String getKerdes() {
         return kerdes;
     }
-
+    /**
+     * Adatbázis, kérdésmegadó függvény
+     * @param kerdes 
+     */
     public void setKerdes(String kerdes) {
         this.kerdes = kerdes;
     }
