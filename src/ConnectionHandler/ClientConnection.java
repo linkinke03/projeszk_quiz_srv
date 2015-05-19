@@ -34,10 +34,14 @@ public class ClientConnection extends Thread {
         pw = new PrintWriter(s.getOutputStream());
     }
     
+    /**
+     * A Thread run metódusa.
+     * Kezeli a kéréseket és válaszol rájuk.
+     */
     @Override
     public void run() {
         String action = sc.nextLine();
-        while(!action.equals("quit")) {
+        while(!s.isConnected() || !action.equals("quit")) {
             switch (action) {
                 case "new":
                     createQuizQuestion(q);
@@ -75,6 +79,10 @@ public class ClientConnection extends Thread {
         }
     }
     
+    /**
+     * Új quizkérdést generál az adatbázisból.
+     * @param q Az adatbázistól kapott quizkérdés.
+     */
     private void createQuizQuestion(quiz q) {
         Random r = new Random();
         String question = q.getKerdes();
@@ -124,16 +132,29 @@ public class ClientConnection extends Thread {
         this.question = new QuizQuestion(question, answers);
     }
 
+    /**
+     * Visszaadja a kliens felé látható kérdést.
+     * @return A létrejött QuizQuestion.
+     */
     public QuizQuestion getNewQuestion() {
         q = quizController.getRandomQuiz();
         createQuizQuestion(q);
         return this.question;
     }
 
+    /**
+     * A kapott válasz helyességét dönti el.
+     * @param answer A vizsgált kérdés.
+     * @return Igen, ha helyes, nem, ha nem.
+     */
     public Boolean isCorrect(String answer) {
         return answer.equals(q.helyesValasz);
     }
 
+    /**
+     * Visszaadja a helyes választ.
+     * @return A helyes válasz.
+     */
     public String getCorrectAnswer() {
         return q.helyesValasz;
     }
