@@ -85,11 +85,17 @@ public class quiz implements Serializable {
     public void setValasz_3(String valasz_3) {
         this.valasz_3 = valasz_3;
     }
-
+    /**
+     * Adatbázis, 4. válaszlehetőség lekérdező függvény
+     * @return 
+     */
     public String getValasz_4() {
         return valasz_4;
     }
-
+    /**
+     * Adatbázis, 4. válaszlehetőség lekérdező függvény
+     * @param valasz_4 
+     */
     public void setValasz_4(String valasz_4) {
         this.valasz_4 = valasz_4;
     }
