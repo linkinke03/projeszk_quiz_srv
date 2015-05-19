@@ -142,7 +142,10 @@ public class quiz implements Serializable {
         }
         return true;
     }
-
+    /**
+     * Adatbázis, toString metódusa
+     * @return 
+     */
     @Override
     public String toString() {
         return "entities.quiz[ id=" + id + " ]: "+getKerdes()+": "+getHelyesValasz()+"/"+
