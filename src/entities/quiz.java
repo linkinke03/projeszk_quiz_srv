@@ -101,22 +101,35 @@ public class quiz implements Serializable {
     }
     
     
-    
+    /**
+     * Adatbázis, Id lekérdező függvény
+     * @return 
+     */
     public Long getId() {
         return id;
     }
-
+    /**
+     * Adatbázis, Id megadó függvény
+     * @param id 
+     */
     public void setId(Long id) {
         this.id = id;
     }
-
+    /**
+     * Adatbázis, hashCode függvénye
+     * @return 
+     */
     @Override
     public int hashCode() {
         int hash = 0;
         hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
-
+    /**
+     * Adatbázis, egyenlőségvizsgáló függvénye
+     * @param object
+     * @return 
+     */
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
