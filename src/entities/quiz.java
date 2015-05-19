@@ -27,7 +27,12 @@ public class quiz implements Serializable {
     public String valasz_2;
     public String valasz_3;
     public String valasz_4;
-
+    
+    
+    /**
+     * Adatbázis, kérdéslekérdező függvény
+     * @return 
+     */
     public String getKerdes() {
         return kerdes;
     }
