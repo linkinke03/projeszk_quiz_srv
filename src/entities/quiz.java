@@ -30,70 +30,70 @@ public class quiz implements Serializable {
     
     
     /**
-     * Adatbázis, kérdéslekérdező függvény
-     * @return 
+     * kérdéslekérdező függvény
+     * @return a rekord kérdés mezőjével tér vissza
      */
     public String getKerdes() {
         return kerdes;
     }
     /**
-     * Adatbázis, kérdésmegadó függvény
+     * kérdésmegadó függvény
      * @param kerdes 
      */
     public void setKerdes(String kerdes) {
         this.kerdes = kerdes;
     }
     /**
-     * Adatbázis, helyes válasz lekérdező függvény
-     * @return 
+     * helyes válasz lekérdező függvény
+     * @return a rekord helyes válasz mezőjével tér vissza
      */
     public String getHelyesValasz() {
         return helyesValasz;
     }
     /**
-     * Adatbázis, helyes válasz megadó függvény
+     * helyes válasz megadó függvény
      * @param helyesValasz 
      */
     public void setHelyesValasz(String helyesValasz) {
         this.helyesValasz = helyesValasz;
     }
     /**
-     * Adatbázis, 2. válaszlehetőség lekérdező függvény
-     * @return 
+     * 2. válaszlehetőség lekérdező függvény
+     * @return a rekord 2. válaszlehetőségével tér vissza
      */
     public String getValasz_2() {
         return valasz_2;
     }
     /**
-     * Adatbázis, 2. válaszlehetőség megadó függvény
+     * 2. válaszlehetőség megadó függvény
      * @param valasz_2 
      */
     public void setValasz_2(String valasz_2) {
         this.valasz_2 = valasz_2;
     }
     /**
-     * Adatbázis, 3. válaszlehetőség megadó függvény
-     * @return 
+     * 3. válaszlehetőség megadó függvény
+     * @return a rekord 3. válaszlehetőségével tér vissza
      */
     public String getValasz_3() {
         return valasz_3;
     }
     /**
-     * Adatbázis, 3. válaszlehetőség megadó függvény
+     * 3. válaszlehetőség megadó függvény
      * @param valasz_3 
      */
     public void setValasz_3(String valasz_3) {
         this.valasz_3 = valasz_3;
     }
     /**
-     * Adatbázis, 4. válaszlehetőség lekérdező függvény
-     * @return 
+     * 4. válaszlehetőség lekérdező függvény
+     * @return a rekord 4. válaszlehetőségével tér vissza
      */
     public String getValasz_4() {
         return valasz_4;
     }
     /**
-     * Adatbázis, 4. válaszlehetőség lekérdező függvény
+     * 4. válaszlehetőség lekérdező függvény
      * @param valasz_4 
      */
     public void setValasz_4(String valasz_4) {
@@ -102,21 +102,21 @@ public class quiz implements Serializable {
     
     
     /**
-     * Adatbázis, Id lekérdező függvény
-     * @return 
+     * a objektum id-át adja vissza
+     * @return az adott objektum id-al tér vissza
      */
     public Long getId() {
         return id;
     }
     /**
-     * Adatbázis, Id megadó függvény
+     * egy rekordnak az id-át tudjuk vele beállítani
      * @param id 
      */
     public void setId(Long id) {
         this.id = id;
     }
     /**
-     * Adatbázis, hashCode függvénye
+     * hashCode
      * @return 
      */
     @Override
@@ -126,9 +126,9 @@ public class quiz implements Serializable {
         return hash;
     }
     /**
-     * Adatbázis, egyenlőségvizsgáló függvénye
+     * egyenlőséget vizsgálja
      * @param object
-     * @return 
+     * @return ha a quiz objektum egyeik a paraméterben kapott objektummal akkor igazzal tér vissza
      */
     @Override
     public boolean equals(Object object) {
@@ -143,8 +143,8 @@ public class quiz implements Serializable {
         return true;
     }
     /**
-     * Adatbázis, toString metódusa
-     * @return 
+     * visszatér egy rekordhoz tartozó stringgel
+     * @return quiz objektum string reprezentálása
      */
     @Override
     public String toString() {

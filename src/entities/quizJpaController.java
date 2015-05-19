@@ -30,7 +30,10 @@ public class quizJpaController implements Serializable {
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
-
+    /**
+     * létrehoz egy quiz objektumot és átadja az adatbázisnak
+     * @param quiz 
+     */
     public void create(quiz quiz) {
         EntityManager em = null;
         try {
@@ -44,7 +47,12 @@ public class quizJpaController implements Serializable {
             }
         }
     }
-
+    /**
+     * a paraméterben kapott quiz objektumot lehet vele módosítani
+     * @param quiz
+     * @throws NonexistentEntityException
+     * @throws Exception 
+     */
     public void edit(quiz quiz) throws NonexistentEntityException, Exception {
         EntityManager em = null;
         try {
@@ -67,7 +75,11 @@ public class quizJpaController implements Serializable {
             }
         }
     }
-
+    /**
+     * a paraméterben kapott ID-hoz tartozó rekordot törli az adatbázisból
+     * @param id
+     * @throws NonexistentEntityException 
+     */
     public void destroy(Long id) throws NonexistentEntityException {
         EntityManager em = null;
         try {
@@ -88,15 +100,30 @@ public class quizJpaController implements Serializable {
             }
         }
     }
-
+    /**
+     *visszatér egy listával ami tartalmazza az adatbázisban található
+     * rekordokat
+     * @return quiz objektumokból álló lista
+     */
     public List<quiz> findquizEntities() {
         return findquizEntities(true, -1, -1);
     }
-
+    /**
+     * visszaad egy listát ami a paramétereknek megfelelő rekordokat tartalmazza
+     * @param maxResults
+     * @param firstResult
+     * @return quiz objektumokból álló lista
+     */
     public List<quiz> findquizEntities(int maxResults, int firstResult) {
         return findquizEntities(false, maxResults, firstResult);
     }
-
+    /**
+     * visszaad egy listát ami a paramétereknek megfelelő rekordokat tartalmazza
+     * @param all
+     * @param maxResults
+     * @param firstResult
+     * @return quiz objektumokból álló lista
+     */
     private List<quiz> findquizEntities(boolean all, int maxResults, int firstResult) {
         EntityManager em = getEntityManager();
         try {
@@ -112,7 +139,11 @@ public class quizJpaController implements Serializable {
             em.close();
         }
     }
-
+    /**
+     * visszatér az adott id hez tartozó quiz objektummal
+     * @param id
+     * @return quiz objektum
+     */
     public quiz findquiz(Long id) {
         EntityManager em = getEntityManager();
         try {
